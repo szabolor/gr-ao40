@@ -1,0 +1,48 @@
+<block>
+  <name>AO-40 PDU Encoder</name>
+  <key>ao40_encoder</key>
+  <category>AO40</category>
+  <import>import ao40</import>
+  <make>ao40.encoder($bit_output, $low_bit, $high_bit)</make>
+
+  <param>
+    <name>Output format</name>
+    <key>bit_output</key>
+    <value>False</value>
+    <type>enum</type>
+    <option>
+        <name>Bit mode (MSB)</name>
+        <key>True</key>
+    </option>
+    <option>
+        <name>Byte mode</name>
+        <key>False</key>
+    </option>
+  </param>
+
+  <param>
+    <name>Low Bit assigned value</name>
+    <key>low_bit</key>
+    <value>0x00</value>
+    <type>int</type>
+    <hide>part</hide>
+  </param>
+
+  <param>
+    <name>High Bit assigned value</name>
+    <key>high_bit</key>
+    <value>0xff</value>
+    <type>int</type>
+    <hide>part</hide>
+  </param>
+
+  <sink>
+    <name>data_in</name>
+    <type>message</type>
+  </sink>
+  <source>
+    <name>encoded_out</name>
+    <type>message</type>
+  </source>
+</block>
+

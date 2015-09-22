@@ -1,0 +1,15 @@
+<block>
+  <name>AO-40 PDU Decoder</name>
+  <key>ao40_decoder</key>
+  <category>AO40</category>
+  <import>import ao40</import>
+  <make>ao40.decoder()</make>
+  <sink>
+    <name>encoded_in</name>
+    <type>message</type>
+  </sink>
+  <source>
+    <name>data_out</name>
+    <type>message</type>
+  </source>
+</block>
